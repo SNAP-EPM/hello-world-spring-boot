@@ -1,12 +1,6 @@
 pipeline{
     agent any
     stages {
-        stage('scm') {
-            steps {
-                git 'https://github.com/SNAP-EPM/hello-world-spring-boot.git'
-            }
-        }
-
         stage('build') {
             steps{
                 sh 'mvn clean install'
